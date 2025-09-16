@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Star } from "lucide-react"; // for rating icon
 
+
 // Sample product data
 const featuredProducts = {
   men: [
-    { id: 1, name: "Classic Chronograph", price: 349, image: "/photos/image4.png" },
-    { id: 2, name: "Diver Professional", price: 499, image: "/photos/image5.png" },
-    { id: 3, name: "Executive Steel", price: 429, image: "/photos/image6.png" },
-    { id: 4, name: "Aviator Classic", price: 379, image: "/photos/image7.png" }
+    { id: 1, name: "Classic Chronograph", price: 349, image: "photos/image4.png" },
+    { id: 2, name: "Diver Professional", price: 499, image: "photos/image5.png" },
+    { id: 3, name: "Executive Steel", price: 429, image: "photos/image6.png" },
+    { id: 4, name: "Aviator Classic", price: 379, image: "photos/image7.png" }
   ],
   women: [
     {
@@ -24,21 +25,21 @@ const featuredProducts = {
       id: 7, name: "Slim Diamond Dial", price: 599,
       image: "https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
     },
-    { id: 8, name: "Minimalist Ceramic", price: 389, image: "/photos/image5.png" }
+    { id: 8, name: "Minimalist Ceramic", price: 389, image: "photos/image5.png" }
   ]
 };
 
 // Extra sample section (Sveston-style)
 const extraProducts = [
-  { id: 101, name: "Aristos", price: 19999, discount: 17, rating: 4.8, image: "/photos/image1.png", type: "Men's Stainless Steel" },
-  { id: 102, name: "Bullston", price: 24999, discount: 25, rating: 4.7, image: "/photos/image2.png", type: "Men's Stainless Steel" },
-  { id: 103, name: "Spectrum", price: 22999, discount: 19, rating: 4.6, image: "/photos/image3.png", type: "Men's Stainless Steel" },
-  { id: 104, name: "Infinity", price: 17999, discount: 15, rating: 4.5, image: "/photos/image4.png", type: "Men's Rubber" },
-  { id: 105, name: "Infinity", price: 17999, discount: 15, rating: 4.5, image: "/photos/image4.png", type: "Men's Rubber" },
-  { id: 106, name: "Infinity", price: 17999, discount: 15, rating: 4.5, image: "/photos/image4.png", type: "Men's Rubber" },
-  { id: 107, name: "Infinity", price: 17999, discount: 15, rating: 4.5, image: "/photos/image4.png", type: "Men's Rubber" },
-  { id: 108, name: "Infinity", price: 17999, discount: 15, rating: 4.5, image: "/photos/image4.png", type: "Men's Rubber" },
-  { id: 109, name: "Infinity", price: 17999, discount: 15, rating: 4.5, image: "/photos/image4.png", type: "Men's Rubber" }
+  { id: 101, name: "Aristos", price: 19999, discount: 17, rating: 4.8, image: "photos/image1.png", type: "Men's Stainless Steel" },
+  { id: 102, name: "Bullston", price: 24999, discount: 25, rating: 4.7, image: "photos/image2.png", type: "Men's Stainless Steel" },
+  { id: 103, name: "Spectrum", price: 22999, discount: 19, rating: 4.6, image: "photos/image3.png", type: "Men's Stainless Steel" },
+  { id: 104, name: "Infinity", price: 17999, discount: 15, rating: 4.5, image: "photos/image4.png", type: "Men's Rubber" },
+  { id: 105, name: "Infinity", price: 17999, discount: 15, rating: 4.5, image: "photos/image4.png", type: "Men's Rubber" },
+  { id: 106, name: "Infinity", price: 17999, discount: 15, rating: 4.5, image: "photos/image4.png", type: "Men's Rubber" },
+  { id: 107, name: "Infinity", price: 17999, discount: 15, rating: 4.5, image: "photos/image4.png", type: "Men's Rubber" },
+  { id: 108, name: "Infinity", price: 17999, discount: 15, rating: 4.5, image: "photos/image4.png", type: "Men's Rubber" },
+  { id: 109, name: "Infinity", price: 17999, discount: 15, rating: 4.5, image: "photos/image4.png", type: "Men's Rubber" }
 ];
 
 export default function Home() {
@@ -104,7 +105,7 @@ export default function Home() {
             >
               <img
                 style={{ height: "80%" }}
-                src="/photos/image2.png"
+                src="photos/image2.png"
                 alt="Classic Watch"
                 className="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
               />
@@ -112,7 +113,7 @@ export default function Home() {
             <div className="group overflow-hidden rounded-2xl">
               <img
                 style={{ height: "80%" }}
-                src="/photos/image1.png"
+                src="photos/image1.png"
                 alt="Luxury Watch"
                 className="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
               />
@@ -120,7 +121,7 @@ export default function Home() {
             <div className="group overflow-hidden rounded-2xl">
               <img
                 style={{ height: "80%" }}
-                src="/photos/image3.png"
+                src="photos/image3.png"
                 alt="Modern Watch"
                 className="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
               />
