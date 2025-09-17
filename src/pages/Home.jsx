@@ -105,7 +105,7 @@ export default function Home() {
             >
               <img
                 style={{ height: "80%" }}
-                src="photos/image2.png"
+                src="/photos/image2.png"
                 alt="Classic Watch"
                 className="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
               />
@@ -113,7 +113,7 @@ export default function Home() {
             <div className="group overflow-hidden rounded-2xl">
               <img
                 style={{ height: "80%" }}
-                src="photos/image1.png"
+                src="/photos/image1.png"
                 alt="Luxury Watch"
                 className="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
               />
@@ -121,7 +121,7 @@ export default function Home() {
             <div className="group overflow-hidden rounded-2xl">
               <img
                 style={{ height: "80%" }}
-                src="photos/image3.png"
+                src="/photos/image3.png"
                 alt="Modern Watch"
                 className="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
               />
