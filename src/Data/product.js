@@ -7,7 +7,7 @@ const products = [
     price: 299,
     category: "Men",
     description: "Elegant design with stainless steel strap and water resistance.",
-    image: "/photos/image1.png",
+    image: "photos/image1.png",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const products = [
     price: 450,
     category: "Men",
     description: "Premium women’s watch with crystal finish and leather strap.",
-    image: "/photos/image2.png",
+    image: "photos/image2.png",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const products = [
     price: 450,
     category: "Men",
     description: "Premium women’s watch with crystal finish and leather strap.",
-    image: "/photos/image3.png",
+    image: "photos/image3.png",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ const products = [
     price: 450,
     category: "Men",
     description: "Premium women’s watch with crystal finish and leather strap.",
-    image: "/photos/image4.png",
+    image: "photos/image4.png",
   },
 ];
 

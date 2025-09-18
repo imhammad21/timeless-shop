@@ -10,7 +10,7 @@ const featuredProducts = {
     { id: 1, name: "Classic Chronograph", price: 349, image: "photos/image4.png" },
     { id: 2, name: "Diver Professional", price: 499, image: "photos/image5.png" },
     { id: 3, name: "Executive Steel", price: 429, image: "photos/image6.png" },
-    { id: 4, name: "Aviator Classic", price: 379, image: "photos/image7.png" }
+    { id: 4, name: "Aviator Classic", price: 379, image: "photos/image3.png" }
   ],
   women: [
     {
@@ -105,7 +105,7 @@ export default function Home() {
             >
               <img
                 style={{ height: "80%" }}
-                src="/photos/image2.png"
+                src="photos/image2.png"
                 alt="Classic Watch"
                 className="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
               />
@@ -113,7 +113,7 @@ export default function Home() {
             <div className="group overflow-hidden rounded-2xl">
               <img
                 style={{ height: "80%" }}
-                src="/photos/image1.png"
+                src="photos/image1.png"
                 alt="Luxury Watch"
                 className="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
               />
@@ -121,7 +121,7 @@ export default function Home() {
             <div className="group overflow-hidden rounded-2xl">
               <img
                 style={{ height: "80%" }}
-                src="/photos/image3.png"
+                src="photos/image3.png"
                 alt="Modern Watch"
                 className="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
               />
