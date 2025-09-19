@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: "/timeless-shop/",   // 👈 must have leading & trailing slash
+  build:{outDir:'dist'},
   resolve: {
     alias: {
       '@': '/src',
