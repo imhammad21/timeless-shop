@@ -6,11 +6,9 @@ export default defineConfig({
   base: "/timeless-shop/",
   build: {
     outDir: 'dist',
-    // Add rollup options to ensure correct entry point
+    // Add these options to ensure proper chunking and asset handling
     rollupOptions: {
-      input: {
-        main: './index.html'
-      }
+      input: './index.html'
     }
   },
   resolve: {
@@ -18,4 +16,9 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  // Add this server configuration for development
+  server: {
+    port: 3000,
+    open: true
+  }
 })
