@@ -1,12 +1,18 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Check if this matches your actual GitHub repository name
-const repoName = 'timeless-shop' // Change this if different
-
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? `/${repoName}/` : '/',
+  base: "/timeless-shop/",
+  build: {
+    outDir: 'dist',
+    // Add rollup options to ensure correct entry point
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      }
+    }
+  },
   resolve: {
     alias: {
       '@': '/src',
