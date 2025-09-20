@@ -5,22 +5,39 @@ import Home from "./pages/Home";
 import Products from "./pages/products";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Navbar from "./components/Navbar"; 
 
 export default function App() {
-  const [cart, setCart] = useState(() => {
-    return JSON.parse(localStorage.getItem("watchShopCart")) || [];
-  });
+  // const savedCart = JSON.parse(localStorage.getItem("watchShopCart")) || [];
 
+  // const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+  return JSON.parse(localStorage.getItem("watchShopCart")) || [];
+});
+
+
+  
+  // Load cart from localStorage on mount
+  useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem("watchShopCart")) || [];
+    setCart(savedCart);
+  }, []);
+
+  // Save cart to localStorage when it changes
   useEffect(() => {
     localStorage.setItem("watchShopCart", JSON.stringify(cart));
   }, [cart]);
+  
 
+  // Add item
   const addToCart = (product) => {
     setCart((prev) => {
       const existing = prev.find((item) => item.id === product.id);
       if (existing) {
         return prev.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
         );
       } else {
         return [...prev, { ...product, quantity: 1 }];
