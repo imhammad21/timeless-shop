@@ -6,7 +6,7 @@ const repoName = 'timeless-shop' // Change this if different
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? `/${timeless-shop}/` : '/',
+  base: process.env.NODE_ENV === 'production' ? `/${repoName}/` : '/',
   resolve: {
     alias: {
       '@': '/src',
