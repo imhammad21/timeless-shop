@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import MainLayout from "./Layouts/mainLayout";
+import MainLayout from "./Layouts/MainLayout";
 import Home from "./pages/Home";
 import Products from "./pages/products";
 import About from "./pages/About";
