@@ -101,7 +101,7 @@ export default function Navbar({ cart, setCart }) {
       )
       .join("\n")}\n\n💰 Total: $${total.toFixed(2)}`;
 
-    const whatsappUrl = `https://wa.me/03113436386?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/923113436386?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, "_blank");
