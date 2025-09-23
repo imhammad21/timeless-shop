@@ -95,16 +95,18 @@ export default function Navbar({ cart, setCart }) {
     );
 
     const message = `🛒 *New Order*\n\n👤 Name: ${orderDetails.name}\n📞 Phone: ${orderDetails.number}\n📧 Email: ${orderDetails.email}\n🏠 Address: ${orderDetails.address}\n\n📦 Items:\n${savedCart
-      .map(
-        (item) =>
-          `${item.name} x${item.quantity} = $${item.price * item.quantity}`
-      )
-      .join("\n")}\n\n💰 Total: $${total.toFixed(2)}`;
+  .map(
+    (item) =>
+      `${item.name} x${item.quantity} = $${item.price * item.quantity}`
+  )
+  .join("\n")}\n\n💰 Total: $${total.toFixed(2)}`;
 
-    const whatsappUrl = `https://wa.me/923113436386?text=${encodeURIComponent(
-      message
-    )}`;
-    window.open(whatsappUrl, "_blank");
+const whatsappUrl = `https://wa.me/923113436386?text=${encodeURIComponent(
+  message
+)}`;
+
+window.open(whatsappUrl, "_blank");
+
 
     setIsCheckoutOpen(false);
     setIsCartOpen(false);
