@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Star } from "lucide-react"; // for rating icon
 
 
+
 // Sample product data
 const featuredProducts = {
   men: [
@@ -131,67 +132,73 @@ export default function Home() {
         </div>
 
 
-        {/* Men's Collection */}
-        {/* ... (your existing men's collection code) */}
-         <div className="mb-16">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-2xl font-semibold">Men's Collection</h3>
-            <a
-              href="/products?category=Men"
-              className="text-gray-600 hover:text-black transition"
-            >
-              View All →
-            </a>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {featuredProducts.men.map((product) => (
-              <div key={product.id} className="group">
-                <div className="aspect-square overflow-hidden rounded-lg bg-gray-100">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                  />
-                </div>
-                <div className="mt-3">
-                  <h4 className="font-medium">{product.name}</h4>
-                  <p className="text-gray-600">Rs {product.price}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+{/* Men's Collection */}
+<div className="mb-16">
+  <div className="flex items-center justify-between mb-8">
+    <h3 className="text-2xl font-semibold">Men's Collection</h3>
+    <Link
+      to="/products?category=Men"
+      className="text-gray-600 hover:text-black transition"
+    >
+      View All →
+    </Link>
+  </div>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+    {featuredProducts.men.map((product) => (
+      <div
+        key={product.id}
+        className="group cursor-pointer"
+        onClick={() => { setSelectedProduct(product); setShowProductModal(true); }}
+      >
+        <div className="aspect-square overflow-hidden rounded-lg bg-gray-100">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+          />
         </div>
+        <div className="mt-3">
+          <h4 className="font-medium">{product.name}</h4>
+          <p className="text-gray-600">Rs {product.price}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
 
-        {/* Women's Collection */}
-        {/* ... (your existing women's collection code) */}
-              <div className="mb-16">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-2xl font-semibold">Women's Collection</h3>
-            <a
-              href="/products?category=Women"
-              className="text-gray-600 hover:text-black transition"
-            >
-              View All →
-            </a>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {featuredProducts.women.map((product) => (
-              <div key={product.id} className="group">
-                <div className="aspect-square overflow-hidden rounded-lg bg-gray-100">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                  />
-                </div>
-                <div className="mt-3">
-                  <h4 className="font-medium">{product.name}</h4>
-                  <p className="text-gray-600">Rs {product.price}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+{/* Women's Collection */}
+<div className="mb-16">
+  <div className="flex items-center justify-between mb-8">
+    <h3 className="text-2xl font-semibold">Women's Collection</h3>
+    <Link
+      to="/products?category=Women"
+      className="text-gray-600 hover:text-black transition"
+    >
+      View All →
+    </Link>
+  </div>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+    {featuredProducts.women.map((product) => (
+      <div
+        key={product.id}
+        className="group cursor-pointer"
+        onClick={() => { setSelectedProduct(product); setShowProductModal(true); }}
+      >
+        <div className="aspect-square overflow-hidden rounded-lg bg-gray-100">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+          />
         </div>
+        <div className="mt-3">
+          <h4 className="font-medium">{product.name}</h4>
+          <p className="text-gray-600">Rs {product.price}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
 
 
         {/* Extra Sveston-Style Product Section */}

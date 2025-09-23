@@ -4,6 +4,7 @@ import { useCart } from "../context/CartContext";
 import { FaStar as Star } from "react-icons/fa";
 import products from "../Data/product"; // ✅ fixed import (no curly braces)
 
+
 export default function Products({ addToCart, cart }) {
   const [filterCategory, setFilterCategory] = useState("All");
   const [sortOrder, setSortOrder] = useState("");
