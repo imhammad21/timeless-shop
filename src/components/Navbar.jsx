@@ -1,6 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaShoppingCart, FaUser, FaTimes } from "react-icons/fa";
+import { WHATSAPP_NUMBER } from "../constants/constants";
+
 
 export default function Navbar({ cart, setCart }) {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -95,15 +97,12 @@ export default function Navbar({ cart, setCart }) {
     );
 
   const message = `🛒 *New Order*\n\n👤 Name: ${orderDetails.name}\n📞 Phone: ${orderDetails.number}\n📧 Email: ${orderDetails.email}\n🏠 Address: ${orderDetails.address}\n\n📦 Items:\n${savedCart
-  .map(
-    (item) =>
-      `${item.name} x${item.quantity} = $${item.price * item.quantity}`
-  )
+  .map((item) => `${item.name} x${item.quantity} = $${item.price * item.quantity}`)
   .join("\n")}\n\n💰 Total: $${total.toFixed(2)}`;
 
-const phoneNumber = "923113436386"; // Replace with your seller WhatsApp number
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappURL, "_blank");
+const whatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(message)}`;
+
+window.open(whatsappUrl, "_blank");
     localStorage.removeItem("watchShopCart");
     setCart([]);
     alert("Order placed! Redirecting to WhatsApp...");
