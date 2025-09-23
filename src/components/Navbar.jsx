@@ -94,7 +94,7 @@ export default function Navbar({ cart, setCart }) {
       0
     );
 
-    const message = `🛒 *New Order*\n\n👤 Name: ${orderDetails.name}\n📞 Phone: ${orderDetails.number}\n📧 Email: ${orderDetails.email}\n🏠 Address: ${orderDetails.address}\n\n📦 Items:\n${savedCart
+  const message = `🛒 *New Order*\n\n👤 Name: ${orderDetails.name}\n📞 Phone: ${orderDetails.number}\n📧 Email: ${orderDetails.email}\n🏠 Address: ${orderDetails.address}\n\n📦 Items:\n${savedCart
   .map(
     (item) =>
       `${item.name} x${item.quantity} = $${item.price * item.quantity}`
@@ -106,6 +106,9 @@ const whatsappUrl = `https://api.whatsapp.com/send?phone=923113436386&text=${enc
 )}`;
 
 window.open(whatsappUrl, "_blank");
+    localStorage.removeItem("watchShopCart");
+    setCart([]);
+    alert("Order placed! Redirecting to WhatsApp...");
 
 
     setIsCheckoutOpen(false);
