@@ -101,11 +101,9 @@ export default function Navbar({ cart, setCart }) {
   )
   .join("\n")}\n\n💰 Total: $${total.toFixed(2)}`;
 
-const whatsappUrl = `https://api.whatsapp.com/send?phone=923113436386&text=${encodeURIComponent(
-  message
-)}`;
-
-window.open(whatsappUrl, "_blank");
+const phoneNumber = "923113436386"; // Replace with your seller WhatsApp number
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
     localStorage.removeItem("watchShopCart");
     setCart([]);
     alert("Order placed! Redirecting to WhatsApp...");

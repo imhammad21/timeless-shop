@@ -74,6 +74,7 @@ export default function Home() {
     const phoneNumber = "923113436386"; // Replace with your seller WhatsApp number
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
+    
 
     setShowCheckoutModal(false);
     setForm({ fullname: "", email: "", phone: "", address: "" });
